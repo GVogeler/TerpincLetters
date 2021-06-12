@@ -64,21 +64,21 @@
 
 	<!-- gesamtes css ist in dieser Datei zusammengefasst mit Ausnahme der Navigation -->
 	<xsl:variable name="projectCss">
-		<xsl:value-of select="concat($gamsdev, '/frontend-templates/trunk/templates5/css/template.css')"/>
+		<xsl:value-of select="concat($gamsdev, './css/template.css')"/>
 	</xsl:variable>
 	<!--css für die navigation-->
 	<xsl:variable name="projectNav">
-		<xsl:value-of select="concat($gamsdev, '/frontend-templates/trunk/templates5/css/navbar.css')"/>
+		<xsl:value-of select="concat($gamsdev, './css/navbar.css')"/>
 	</xsl:variable>
 
 	<!--xsl für die suchansicht-->
 	<xsl:variable name="searchXsl">
-		<xsl:value-of select="concat($gamsdev, '/frontend-templates/trunk/templates5/project-search.xsl')"
+		<xsl:value-of select="concat($gamsdev, './project-search.xsl')"
 		/>
 	</xsl:variable>
 	
 	<!-- GamsJs related templates -->
-	<xsl:include href="./root/lib/3.0/gamsJS/1.x/gamsjs_wippets/widget_injection.xsl"/>
+	<xsl:include href="./lib/3.0/gamsJS/1.x/gamsjs_wippets/widget_injection.xsl"/>
 
 	<xsl:template match="/">
 
@@ -103,12 +103,12 @@
 				</title>
 
 				<!-- Bootstrap core CSS -->
-				<link href="./root/lib/2.0/bootstrap-4.5.0-dist/css/bootstrap.min.css" rel="stylesheet"/>
+				<link href="./lib/2.0/bootstrap-4.5.0-dist/css/bootstrap.min.css" rel="stylesheet"/>
 				
 				<!-- extra lib für icons, optimiert für bootstrap
 				link: https://useiconic.com/open/
 				einbindung zB: <span class="oi oi-magnifying-glass"><xsl:text> </xsl:text></span> -->
-				<link href="./root/lib/2.0/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet"/>
+				<link href="./lib/2.0/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet"/>
 					
 
 				<!-- Custom styles for this template -->
@@ -116,10 +116,10 @@
 				<link href="{$projectNav}" rel="stylesheet" type="text/css"/>
 
 				<!-- jQuery core JavaScript ================================================== -->
-				<script type="text/javascript" src="./root/lib/2.0/jquery-3.5.1.min.js"><xsl:text> </xsl:text></script>
+				<script type="text/javascript" src="./lib/2.0/jquery-3.5.1.min.js"><xsl:text> </xsl:text></script>
 
 				<!-- Bootstrap core JavaScript ================================================== -->
-				<script type="text/javascript" src="./root/lib/2.0/bootstrap-4.5.0-dist/js/bootstrap.bundle.min.js"><xsl:text> </xsl:text></script>
+				<script type="text/javascript" src="./lib/2.0/bootstrap-4.5.0-dist/js/bootstrap.bundle.min.js"><xsl:text> </xsl:text></script>
 
 				<!-- 
 					GamsJs inclusion  
@@ -129,7 +129,7 @@
 						- (bug fixes / will first be deployed to gamsdev folder)
 				-->
 				
-				<script src="./root/lib/3.0/gamsJS/1.x/gams.js" type="text/javascript"><xsl:text> </xsl:text></script>
+				<script src="./lib/3.0/gamsJS/1.x/gams.js" type="text/javascript"><xsl:text> </xsl:text></script>
 				<!--<script src="https://glossa.uni-graz.at/gamsdev/stoffse/test/gams.js"><xsl:text> </xsl:text></script>-->
 
 			</head>
@@ -155,7 +155,7 @@
 									</div>
 									<a href="http://www.uni-graz.at" class="unilogo" target="_blank">
 										<img class="logoUni"
-											src="./root/templates/img/logo_uni_graz_4c.jpg"
+											src="./templates/img/logo_uni_graz_4c.jpg"
 											height="62" title="Universität Graz"
 											alt="Universität Graz"/>
 									</a>
