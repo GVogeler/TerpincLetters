@@ -135,7 +135,7 @@
 				<script src="./lib/3.0/gamsJS/1.x/gams.js" type="text/javascript"><xsl:text> </xsl:text></script>
 				<!--<script src="https://glossa.uni-graz.at/gamsdev/stoffse/test/gams.js"><xsl:text> </xsl:text></script>-->
 				<style>
-					nav.navbar { 
+					nav.navbar, ul.navbar-nav { 
 						background-color: #475862;
 						padding: 0px;
 						}
