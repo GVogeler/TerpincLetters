@@ -13,7 +13,7 @@
     <!--<xsl:output method="xml" doctype-system="about:legacy-compat" encoding="UTF-8" indent="no"/>-->
 
 
-    <xsl:include href="project-static.xsl"/>
+    <xsl:include href="trpcl-static.xsl"/>
 
     <xsl:template name="content">
 

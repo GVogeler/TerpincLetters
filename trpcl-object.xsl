@@ -15,7 +15,7 @@
         <xsl:include href="/lib/3.0/gamsJS/1.x/gamsjs_wippets/widget_injection.xsl"/>
     -->
     
-    <xsl:include href="project-static.xsl"/>
+    <xsl:include href="trpcl-static.xsl"/>
 
     <!--<xsl:output method="xml" doctype-system="about:legacy-compat" encoding="UTF-8" indent="no"/>-->
     
