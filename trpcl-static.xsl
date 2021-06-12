@@ -54,7 +54,7 @@
 
 	<!-- project-specific variables -->
 	<!-- Replace with public server (e.g. https://raw.githubusercontent.com/GVogeler/TerpincLetters/main/ ) to test online version -->
-	<xsl:variable name="gamsdev">.</xsl:variable>
+	<xsl:variable name="gamsdev">https://raw.githubusercontent.com/GVogeler/TerpincLetters/glossa/</xsl:variable>
 	<!-- project abbreviation -->
 	<xsl:variable name="projectID">trpcl</xsl:variable>
 	
