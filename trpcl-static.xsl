@@ -757,7 +757,7 @@
 												name="query"/>
 												<span class="input-group-addon">
 												<a
-												href="/archive/objects/context:{$projectID}/methods/sdef:Context/get?mode=searchHelp"
+												href="/context:{$projectID}?mode=searchHelp"
 												>?</a>
 												</span>
 												</div>
