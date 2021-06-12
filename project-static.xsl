@@ -53,8 +53,11 @@
 	<xsl:variable name="uniGraz">Universität Graz</xsl:variable>
 
 	<!-- project-specific variables -->
+	<!-- Replace with public server (e.g. https://raw.githubusercontent.com/GVogeler/TerpincLetters/main/ ) to test online version -->
 	<xsl:variable name="gamsdev">.</xsl:variable>
-
+	<!-- project abbreviation -->
+	<xsl:variable name="projectID">trpcl</xsl:variable>
+	
 	<xsl:variable name="projectTitle">
 		<xsl:text>GAMS - Project Title</xsl:text>
 	</xsl:variable>
@@ -176,11 +179,11 @@
 						<div id="navbarCollapse" class="collapse navbar-collapse">
 							<ul class="navbar-nav mr-auto">
 								<li class="nav-item">
-									<xsl:if test="$mode = '' and $cid='context:templates5'">
+									<xsl:if test="$mode = '' and $cid=concat('context:',$projectID)">
 										<xsl:attribute name="class">nav-item active</xsl:attribute>
 									</xsl:if>
 									<a class="nav-link"
-										href="/context:templates5"
+										href="/context:{$projectTitle}"
 										>Home <span class="sr-only">(current)</span></a>
 								</li>
 								<li class="nav-item">
@@ -188,15 +191,15 @@
 										<xsl:attribute name="class">nav-item active</xsl:attribute>
 									</xsl:if>
 									<a class="nav-link"
-										href="/archive/objects/context:templates5/methods/sdef:Context/get?mode=project"
+										href="/archive/objects/context:{$projectID}/methods/sdef:Context/get?mode=project"
 										>Projektbeschreibung</a>
 								</li>
 								<li class="nav-item">
-									<xsl:if test="$mode = 'context:templates5'">
+									<xsl:if test="$mode = concat('context:',$projectID)">
 										<xsl:attribute name="class">nav-item active</xsl:attribute>
 									</xsl:if>
 									<a class="nav-link"
-										href="/archive/objects/context:templates5/methods/sdef:Context/get?mode=context:templates5"
+										href="/archive/objects/context:{$projectID}/methods/sdef:Context/get?mode=context:{$projectID}"
 										>Sammlung</a>
 								</li>
 								<li class="nav-item">
@@ -204,7 +207,7 @@
 										<xsl:attribute name="class">nav-item active</xsl:attribute>
 									</xsl:if>
 									<a class="nav-link"
-										href="/archive/objects/context:templates5/methods/sdef:Context/get?mode=search"
+										href="/archive/objects/context:{$projectID}/methods/sdef:Context/get?mode=search"
 										>Erweiterte Suche</a>
 								</li>
 								<li class="nav-item dropdown">
@@ -224,7 +227,7 @@
 										<xsl:attribute name="class">nav-item active</xsl:attribute>
 									</xsl:if>
 									<a class="nav-link"
-										href="/archive/objects/context:templates5/methods/sdef:Context/get?mode=view:gamsJs"
+										href="/archive/objects/context:{$projectID}/methods/sdef:Context/get?mode=view:gamsJs"
 										>gamsJs</a>
 									
 									<!--<a class="nav-link dropdown-toggle" href="#" id="navbardrop"
@@ -269,7 +272,7 @@
 				
 				<main class="container">
 					<xsl:choose>
-						<xsl:when test="$mode = '' and $cid = 'context:templates5'">
+						<xsl:when test="$mode = '' and $cid = concat('context:',$projectID)">
 							<!-- einstiegsseite für projektkontext -->
 
 
@@ -563,7 +566,7 @@
 									<div class="card mb-3 text-center border-dark">
 										<div class="card-body">
 											<xsl:apply-templates
-												select="document(concat('/context:templates5/', 'IMPRINT'))/t:TEI/t:text/t:body/t:div"
+												select="document(concat('/context:', $projectID,'/', 'IMPRINT'))/t:TEI/t:text/t:body/t:div"
 											/>
 										</div>
 									</div>
@@ -579,7 +582,7 @@
 									<div class="card">
 										<div class="card-body">
 											<xsl:apply-templates
-												select="document(concat('/context:templates5/', 'SEARCH_HELP'))/t:TEI/t:text/t:body/t:div"
+												select="document(concat('/context:', $projectID,'/', 'SEARCH_HELP'))/t:TEI/t:text/t:body/t:div"
 											/>
 										</div>
 									</div>
@@ -624,7 +627,7 @@
 								<div class="card">
 									<div class="card-body">
 										<xsl:apply-templates
-											select="document(concat('/context:templates5/', 'ABOUT'))/t:TEI/t:text/t:body/t:div"
+											select="document(concat('/context:', $projectID,'/', 'ABOUT'))/t:TEI/t:text/t:body/t:div"
 										/>
 									</div>
 								</div>
@@ -652,7 +655,7 @@
 												<div class="input-group-append">
 												<span class="input-group-text" id="basic-addon">
 												<a
-												href="/archive/objects/context:templates5/methods/sdef:Context/get?mode=searchHelp"
+												href="/archive/objects/context:{$projectID}/methods/sdef:Context/get?mode=searchHelp"
 												>?</a>
 												</span>
 												</div>
@@ -748,7 +751,7 @@
 												name="query"/>
 												<span class="input-group-addon">
 												<a
-												href="/archive/objects/context:templates5/methods/sdef:Context/get?mode=searchHelp"
+												href="/archive/objects/context:{$projectID}/methods/sdef:Context/get?mode=searchHelp"
 												>?</a>
 												</span>
 												</div>
@@ -869,11 +872,11 @@
 								<h6>Weitere Informationen</h6>
 								<p>
 									<a
-										href="/archive/objects/context:templates5/methods/sdef:Context/get?mode=about"
+										href="/archive/objects/context:{$projectID}/methods/sdef:Context/get?mode=about"
 										>About</a>
 									<br/>
 									<a
-										href="/archive/objects/context:templates5/methods/sdef:Context/get?mode=imprint"
+										href="/archive/objects/context:{$projectID}/methods/sdef:Context/get?mode=imprint"
 										>Impressum</a>
 									<br/>
 									<a
