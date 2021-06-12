@@ -64,16 +64,16 @@
 
 	<!-- gesamtes css ist in dieser Datei zusammengefasst mit Ausnahme der Navigation -->
 	<xsl:variable name="projectCss">
-		<xsl:value-of select="concat($gamsdev, './css/template.css')"/>
+		<xsl:value-of select="concat($gamsdev, '/css/template.css')"/>
 	</xsl:variable>
 	<!--css für die navigation-->
 	<xsl:variable name="projectNav">
-		<xsl:value-of select="concat($gamsdev, './css/navbar.css')"/>
+		<xsl:value-of select="concat($gamsdev, '/css/navbar.css')"/>
 	</xsl:variable>
 
 	<!--xsl für die suchansicht-->
 	<xsl:variable name="searchXsl">
-		<xsl:value-of select="concat($gamsdev, './project-search.xsl')"
+		<xsl:value-of select="concat($gamsdev, '/project-search.xsl')"
 		/>
 	</xsl:variable>
 	
