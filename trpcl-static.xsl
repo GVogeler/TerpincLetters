@@ -53,7 +53,7 @@
 	<xsl:variable name="uniGraz">Universität Graz</xsl:variable>
 
 	<!-- project-specific variables -->
-	<!-- Replace with public server (e.g. https://raw.githubusercontent.com/GVogeler/TerpincLetters/main/ ) to test online version -->
+	<!-- Replace with public server (e.g. https://raw.githubusercontent.com/GVogeler/TerpincLetters/main ) to test online version -->
 	<xsl:variable name="gamsdev">https://raw.githubusercontent.com/GVogeler/TerpincLetters/glossa</xsl:variable>
 	<!-- project abbreviation -->
 	<xsl:variable name="projectID">trpcl</xsl:variable>
@@ -134,6 +134,12 @@
 				
 				<script src="./lib/3.0/gamsJS/1.x/gams.js" type="text/javascript"><xsl:text> </xsl:text></script>
 				<!--<script src="https://glossa.uni-graz.at/gamsdev/stoffse/test/gams.js"><xsl:text> </xsl:text></script>-->
+				<style>
+					nav.navbar { 
+						background-color: #475862;
+						padding: 0px;
+						}
+				</style>
 
 			</head>
 
