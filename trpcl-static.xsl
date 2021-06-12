@@ -197,7 +197,7 @@
 										<xsl:attribute name="class">nav-item active</xsl:attribute>
 									</xsl:if>
 									<a class="nav-link"
-										href="/archive/objects/context:{$projectID}/methods/sdef:Context/get?mode=project"
+										href="/context:{$projectID}?mode=project"
 										>Projektbeschreibung</a>
 								</li>
 								<li class="nav-item">
@@ -205,7 +205,7 @@
 										<xsl:attribute name="class">nav-item active</xsl:attribute>
 									</xsl:if>
 									<a class="nav-link"
-										href="/archive/objects/context:{$projectID}/methods/sdef:Context/get?mode=context:{$projectID}"
+										href="/context:{$projectID}?mode=context:{$projectID}"
 										>Sammlung</a>
 								</li>
 								<li class="nav-item">
@@ -213,7 +213,7 @@
 										<xsl:attribute name="class">nav-item active</xsl:attribute>
 									</xsl:if>
 									<a class="nav-link"
-										href="/archive/objects/context:{$projectID}/methods/sdef:Context/get?mode=search"
+										href="/context:{$projectID}?mode=search"
 										>Erweiterte Suche</a>
 								</li>
 								<li class="nav-item dropdown">
@@ -225,7 +225,7 @@
 										<a class="dropdown-item" href="#">Sticky nav and jumping points fix</a>
 										<a class="dropdown-item" href="http://glossa.uni-graz.at/query:yoda.fulltext-test">Widget Blazegraph full text search in properties with literals as range</a>
 										<a class="dropdown-item" href="/o:templates.editionexample/sdef:TEI/get?mode=queryform" title="Das Wippet enthät ein Formular, in dem alle üblichen Formularfelder in $[0-9]+ umgewandelt werden, um dann als Platzhalter in Query-Objekten eingesetzt werden zu können.">Query Form Example</a>
-										<a class="dropdown-item" href="http://gams.uni-graz.at/archive/objects/context:gg/methods/sdef:Context/get?mode=project" title="example for a bootstrap carousel">Carousel</a>
+										<a class="dropdown-item" href="http://gams.uni-graz.at/context:gg?mode=project" title="example for a bootstrap carousel">Carousel</a>
 									</div>
 								</li>
 								<li class="nav-item">
@@ -233,7 +233,7 @@
 										<xsl:attribute name="class">nav-item active</xsl:attribute>
 									</xsl:if>
 									<a class="nav-link"
-										href="/archive/objects/context:{$projectID}/methods/sdef:Context/get?mode=view:gamsJs"
+										href="/context:{$projectID}?mode=view:gamsJs"
 										>gamsJs</a>
 									
 									<!--<a class="nav-link dropdown-toggle" href="#" id="navbardrop"
@@ -661,7 +661,7 @@
 												<div class="input-group-append">
 												<span class="input-group-text" id="basic-addon">
 												<a
-												href="/archive/objects/context:{$projectID}/methods/sdef:Context/get?mode=searchHelp"
+												href="/context:{$projectID}?mode=searchHelp"
 												>?</a>
 												</span>
 												</div>
@@ -878,15 +878,15 @@
 								<h6>Weitere Informationen</h6>
 								<p>
 									<a
-										href="/archive/objects/context:{$projectID}/methods/sdef:Context/get?mode=about"
+										href="/context:{$projectID}?mode=about"
 										>About</a>
 									<br/>
 									<a
-										href="/archive/objects/context:{$projectID}/methods/sdef:Context/get?mode=imprint"
+										href="/context:{$projectID}?mode=imprint"
 										>Impressum</a>
 									<br/>
 									<a
-										href="/archive/objects/context:gams/methods/sdef:Context/get?mode=dataprotection&amp;locale=de"
+										href="/context:gams?mode=dataprotection&amp;locale=de"
 										>Datenschutz</a>
 								</p>
 
