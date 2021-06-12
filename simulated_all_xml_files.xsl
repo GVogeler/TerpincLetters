@@ -35,18 +35,20 @@
     </sparql>
   </xsl:template>
   <xsl:template match="*" priority="-2"/>
-<!--  ToDo: other data schemes (e.g. LIDO) -->
-  <xsl:template match="/t:TEI">
+<!--  ToDo: other data schemes (e.g. LIDO) 
+  eventually: select by context-declaration
+  -->
+  <xsl:template match="/t:TEI[.//t:ref[@type='context'][@target=$contextinfo/data/@context]]">
     <result>
       <xsl:copy-of select="$contextinfo/data/container"/>
-      <xsl:copy-of select="$contextinfo/data/cid"/>
-      <pid uri="info:fedora/o:trpcl.10"/>
+      <cid><xsl:value-of select="$contextinfo/data/@context"/></cid>
+      <pid uri="info:fedora/{.//t:idno[@type='PID'][1]}"/>
       <model uri="info:fedora/cm:TEI"/>
-      <ownerId>yoda</ownerId>
-      <createdDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-06-12T12:47:29.069Z<xsl:comment>Arbitrary value</xsl:comment></createdDate>
-      <lastModifiedDate datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-06-12T14:08:29.08Z<xsl:comment>Arbitrary value</xsl:comment></lastModifiedDate>
+      <xsl:copy-of select="$contextinfo/data/ownerId"/>
+      <createdDate datatype="http://www.w3.org/2001/XMLSchema#dateTime"><xsl:value-of select="current-dateTime()"/><xsl:comment>Arbitrary value</xsl:comment></createdDate>
+      <lastModifiedDate datatype="http://www.w3.org/2001/XMLSchema#dateTime"><xsl:value-of select="current-dateTime()"/><xsl:comment>Arbitrary value</xsl:comment></lastModifiedDate>
       <title><xsl:value-of select="/t:TEI/t:teiHeader/t:fileDesc/t:titleStmt/t:title"/></title>
-      <identifier><xsl:value-of select="//t:idno[@type='PID']"/></identifier>
+      <identifier><xsl:value-of select=".//t:idno[@type='PID'][1]"/></identifier>
       <description bound="false"/>
     </result>
   </xsl:template>

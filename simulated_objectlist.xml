@@ -2,7 +2,8 @@
 <?xml-stylesheet type="text/xsl" href="simulated_all_xml_files.xsl"?>
 <data
   directory="file:/Z:/Documents/uni/Graz/Betreuung/JozeGlavic/materials/ingest"
+  context="context:trpcl"
 >
   <container>Terpinc Familiy Letters (City Archive Ljubljana) - Student Project</container>
-  <cid>context:trpcl</cid>
+  <ownerId>yoda</ownerId>
 </data>
