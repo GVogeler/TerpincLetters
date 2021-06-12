@@ -183,7 +183,7 @@
 										<xsl:attribute name="class">nav-item active</xsl:attribute>
 									</xsl:if>
 									<a class="nav-link"
-										href="/context:{$projectTitle}"
+										href="/context:{$projectID}"
 										>Home <span class="sr-only">(current)</span></a>
 								</li>
 								<li class="nav-item">
