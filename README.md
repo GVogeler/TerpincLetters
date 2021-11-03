@@ -7,7 +7,7 @@ Student project in the [MA programm "Digital Humanities" at Graz University](htt
 
 Single transcriptions should be processed with [trpcl-object.xsl](https://github.com/GVogeler/TerpincLetters/blob/main/trpcl-object.xsl).
 
-[simulated_objectlist.xml](https://github.com/GVogeler/TerpincLetters/blob/main/simulated_objectlist.xml) is a mock up helper to create a list of letters to be processed with [trpcl-context.xsl](https://github.com/GVogeler/TerpincLetters/blob/main/trpcl-context.xsl) that reads in all XML files from the folder in `/data/@directory` and converts them into a sparql result as used in [GAMS context objects](http://gams.uni-graz.at/o:gams.doku#cmcontext)
+[simulated_objectlist.xml](https://github.com/GVogeler/TerpincLetters/blob/main/simulated_objectlist.xml) is a mock up helper to create a list of letters to be processed with [trpcl-context.xsl](https://github.com/GVogeler/TerpincLetters/blob/main/trpcl-context.xsl) : It reads in all XML files from the folder stored in `/data/@directory` and converts them into a sparql result as used in [GAMS context objects](http://gams.uni-graz.at/o:gams.doku#cmcontext) via [simulated_all_xml_files.xsl](https://github.com/GVogeler/TerpincLetters/blob/main/simulated_all_xml_files.xsl)
 
 All XSL stylesheets include [trpcl-static.xsl](https://github.com/GVogeler/TerpincLetters/blob/main/trpcl-static.xsl) which contains common variables, common html:head content, and the wireframe of the web site.
 
