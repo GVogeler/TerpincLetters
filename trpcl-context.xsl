@@ -297,7 +297,7 @@
                 <xsl:attribute name="href">
                     <xsl:value-of select="concat('/', $cid, '/sdef:Context/getPDF')"/>
                 </xsl:attribute>Ergebnis als PDF <img class="icons"
-                    src="/templates/img/pdf_icon.png" height="18"
+                    src="./templates/img/pdf_icon.png" height="18"
                     alt="Ergebnis als PDF" title="Ergebnis als PDF"/>
             </a>
             <br/>
@@ -310,14 +310,13 @@
                     <!-- getPlatin: PLATIN place and time navigator -->
                     <!-- bei geobrowser und platin können über parameter optionen eingestellt werden (zb welcher kartenhintergrund), dann muss man den link so zusammensetzen und nicht über methode aufrufen -->
                 </xsl:attribute>Ergebnis auf Karte <img class="icons"
-                    src="/templates/img/kml.gif" height="15"
+                    src="./templates/img/kml.gif" height="15"
                     alt="Ergebnis auf Karte" title="Ergebnis auf Karte"/></a>
         </p>
         <h3><xsl:value-of select="/s:sparql/s:results/s:result[1]/s:container"/></h3>
         <p>Anzahl der gefundenen Einträge: <xsl:value-of select="count(s:sparql/s:results/s:result)"
             /></p>
         <xsl:for-each select="s:sparql/s:results/s:result">
-            
             <li>
                 <xsl:choose>
                     <xsl:when test="position() mod 2 = 0">
@@ -344,18 +343,12 @@
                         </xsl:attribute>
                     </img>
                 </a>
-
                 <span class="results">
                     <a>
                         <xsl:attribute name="href">
-
                             <xsl:value-of select="concat('/', ./s:identifier)"/>
-
                         </xsl:attribute>
-
-
                         <xsl:value-of select="./s:title"/>
-
                     </a>
                 </span>
                 <br/>
@@ -363,41 +356,42 @@
                     <a>
                         <xsl:attribute name="href">
                             <xsl:value-of select="concat('/', ./s:identifier)"/>
-
                         </xsl:attribute>
                         <xsl:text>Permalink: </xsl:text><xsl:value-of select="concat('/', ./s:identifier)"/>
-
                     </a>
-
                 </span>
                 <span class="icon-span">
-                    <a target="_blank">
+                    <xsl:choose>
+                        <xsl:when test="./s:model/@uri='info:fedora/cm:TEI'"><a target="_blank">
                         <xsl:attribute name="href">
                             <xsl:value-of
                                 select="concat('/', ./s:identifier, '/TEI_SOURCE')"/>
 
                         </xsl:attribute>
-                        <img src="/templates/img/tei_icon.jpg" 
+                        <img src="./templates/img/tei_icon.jpg" 
                             height="18" alt="TEI-Dokument" title="TEI-Dokument"/>
-                    </a>
-                    <a target="_blank" class="icons">
+                        </a>
+                        </xsl:when>
+                        <xsl:when test="./s:model/@uri='info:fedora/cm:LIDO'">
+                            <a target="_blank" class="icons">
                         <xsl:attribute name="href">
                             <xsl:value-of
                                 select="concat('/', ./s:identifier, '/LIDO_SOURCE')"/>
                         </xsl:attribute>
-                        <img src="/templates/img/lido_icon.png" 
+                        <img src="./templates/img/lido_icon.png" 
                             height="18" alt="LIDO-Dokument" title="LIDO-Dokument"/>
-                    </a>
-                    <a target="_blank" class="icons">
+                    </a></xsl:when>
+                        <xsl:when test="./s:model/@uri='info:fedora/cm:PDF'">
+                            <a target="_blank" class="icons">
                         <xsl:attribute name="href">
                             <xsl:value-of
                                 select="concat('/', ./s:identifier, '/sdef:TEI/getPDF')"/>
-                            <!-- ggfs. auf lido umstellen -->
-
                         </xsl:attribute>
-                        <img src="/templates/img/pdf_icon.png" 
+                        <img src="./templates/img/pdf_icon.png" 
                             height="18" alt="Druckversion" title="Druckversion"/>
                     </a>
+                    </xsl:when>
+                    </xsl:choose>
                 </span>
 
             </li>
