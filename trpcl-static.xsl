@@ -346,7 +346,7 @@
 									<!-- card mit image verbessern -->
 
 									<div class="card">
-										<img class="card-img-top" src="/templates/img/4-esel.jpg"
+										<img class="card-img-top" src="/templates/img/"
 											alt="Card image cap"/>
 										<div class="card-body">
 											<h4 class="card-title">Card title</h4>
