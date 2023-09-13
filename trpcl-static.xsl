@@ -423,13 +423,13 @@
 											<div class="carousel-inner" role="listbox">
 												<div class="carousel-item active">
 												<img class="d-block w-100"
-												src="/templates/img/4-esel.jpg"
+												src="/templates/img/"
 												data-src="holder.js/900x400?theme=social"
 												alt="First slide"/>
 												</div>
 												<div class="carousel-item">
 												<img class="d-block w-100"
-												src="/templates/img/4-esel.jpg"
+												src="/templates/img/"
 												data-src="holder.js/900x400?theme=industrial"
 												alt="Second slide"/>
 												</div>
